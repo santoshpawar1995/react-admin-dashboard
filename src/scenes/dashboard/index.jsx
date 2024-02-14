@@ -10,6 +10,17 @@ import Header from "../../components/Header";
 import ProgressCircle from "../../components/ProgressCircle";
 import StatBox from "../../components/StatBox";
 import EmailIcon from "@mui/icons-material/Email";
+import EnhancedTable from './Table';
+import Table from './Table';
+import BasicExample from './Table';
+import ResponsiveExample from './Table';
+import PersonIcon from '@mui/icons-material/Person';
+import NewspaperIcon from '@mui/icons-material/Newspaper';
+import AttachMoneyIcon from '@mui/icons-material/AttachMoney';
+import CreditScoreIcon from '@mui/icons-material/CreditScore';
+import WarehouseIcon from '@mui/icons-material/Warehouse';
+import AdminPanelSettingsIcon from '@mui/icons-material/AdminPanelSettings';
+// import CreateData from "./Table";
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
@@ -25,9 +36,9 @@ export default function Dashboard() {
   return (
 
     <Box sx={{ width: '100%' }}>
-    
+    <div className='container'>
         <Grid xs={3}>
-        
+       
           <Box display="flex" justifyContent="space-between" alignItems="center">
         <Header title="DASHBOARD" subtitle="Welcome to your dashboard" />
           <Box>
@@ -37,414 +48,700 @@ export default function Dashboard() {
            
            
         </Grid>
-        <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
-        <Grid xs={3}>
-          <Item>  <Box
+        <Grid container rowSpacing={5} columnSpacing={{ xs: 1, sm:2, md:5}}>
+        <Grid item xs={12} sm={6} md={3}>
+          <Box
           gridRow="span 1"
-          backgroundColor={colors.primary[400]}
+          // backgroundColor={colors.primary[400]}
           display="flex"
           alignItems="center"
-          justifyContent="center"
+          justifyContent="space-around"
+          height="4rem"
         >
-          <div>hello</div>
-          {/* <StatBox
-            title="12,361"
-            subtitle="Emails Sent"
-            progress={ProgressCircle}
-            icon={
-              <EmailIcon
-                sx={{ color: colors.greenAccent[600], fontSize: "26px" }}
-              />
-            }
-          /> */}
-        </Box></Item>
+           <Typography
+            variant="h5"
+             fontWeight="600"
+             color={colors.grey[100]}
+             >
+             ACTIVE CUSTOMERS
+             
+           </Typography>
+           <Typography
+            variant="h5"
+             fontWeight="600"
+             color={colors.grey[100]}
+             >
+             30
+             
+           </Typography>
+           <Typography
+            variant="h5"
+             fontWeight="600"
+             color={colors.grey[100]}
+             >
+             {<PersonIcon style={{color:'green',fontSize:'2rem'}}/>}
+           </Typography>
+            
+          
+        </Box>
         </Grid>
-        <Grid xs={3}>
-          <Item>  <Box
+        <Grid  item xs={12} sm={6} md={3}>
+          <Box
           gridRow="span 1"
           backgroundColor={colors.primary[400]}
           display="flex"
           alignItems="center"
-          justifyContent="center"
+          justifyContent="space-around"
+          height="4rem"
         >
-          <StatBox
-            title="12,361"
-            subtitle="Emails Sent"
-            progress={ProgressCircle}
-            icon={
-              <EmailIcon
-                sx={{ color: colors.greenAccent[600], fontSize: "26px" }}
-              />
-            }
-          />
-        </Box></Item>
+           <Typography
+            variant="h5"
+             fontWeight="600"
+             color={colors.grey[100]}
+             >
+             BLOCKED CUSTOMERS
+           </Typography>
+           <Typography
+            variant="h5"
+             fontWeight="600"
+             color={colors.grey[100]}
+             >
+             0
+             
+           </Typography>
+           <Typography
+            variant="h5"
+             fontWeight="600"
+             color={colors.grey[100]}
+             >
+             {<PersonIcon style={{color:'RED',fontSize:'2rem'}}/>}
+           </Typography>
+            
+        
+        </Box>
         </Grid>
-        <Grid xs={3}>
-          <Item>  <Box
+        <Grid item xs={12} sm={6} md={3}>
+          <Box
           gridRow="span 1"
           backgroundColor={colors.primary[400]}
           display="flex"
           alignItems="center"
-          justifyContent="center"
+          justifyContent="space-around"
+          height="4rem"
         >
-          <StatBox
-            title="12,361"
-            subtitle="Emails Sent"
-            progress={ProgressCircle}
-            icon={
-              <EmailIcon
-                sx={{ color: colors.greenAccent[600], fontSize: "26px" }}
-              />
-            }
-          />
-        </Box></Item>
+           <Typography
+            variant="h5"
+             fontWeight="600"
+             color={colors.grey[100]}
+             >
+             TOTAL BLOGS
+             
+           </Typography>
+           <Typography
+            variant="h5"
+             fontWeight="600"
+             color={colors.grey[100]}
+             >
+             0
+             
+           </Typography>
+           <Typography
+            variant="h5"
+             fontWeight="600"
+             color={colors.grey[100]}
+             >
+             {<NewspaperIcon style={{color:'green',fontSize:'2rem'}}/>}
+           </Typography>
+            
+          
+        </Box>
         </Grid>
-        <Grid xs={3}>
-          <Item>  <Box
+        <Grid  item xs={12} sm={6} md={3}>
+          <Box
           gridRow="span 1"
           backgroundColor={colors.primary[400]}
           display="flex"
           alignItems="center"
-          justifyContent="center"
+          justifyContent="space-around"
+          height="4rem"
         >
-          <StatBox
-            title="12,361"
-            subtitle="Emails Sent"
-            progress={ProgressCircle}
-            icon={
-              <EmailIcon
-                sx={{ color: colors.greenAccent[600], fontSize: "26px" }}
-              />
-            }
-          />
-        </Box></Item>
+           <Typography
+            variant="h5"
+             fontWeight="600"
+             color={colors.grey[100]}
+             >
+             TOTAL DEPOSITES
+           </Typography>
+           <Typography
+            variant="h5"
+             fontWeight="600"
+             color={colors.grey[100]}
+             >
+             0
+             
+           </Typography>
+           <Typography
+            variant="h5"
+             fontWeight="600"
+             color={colors.grey[100]}
+             >
+             {<AttachMoneyIcon style={{color:'green',fontSize:'2rem'}}/>}
+           </Typography>
+            
+        
+        </Box>
         </Grid>
-        {/* <Grid xs={3}>
-          <Item>  <Box
+        <Grid item xs={12} sm={6} md={3}>
+          <Box
           gridRow="span 1"
           backgroundColor={colors.primary[400]}
           display="flex"
           alignItems="center"
-          justifyContent="center"
+          justifyContent="space-around"
+          height="4rem"
         >
-          <StatBox
-            title="12,361"
-            subtitle="Emails Sent"
-            progress={ProgressCircle}
-            icon={
-              <EmailIcon
-                sx={{ color: colors.greenAccent[600], fontSize: "26px" }}
-              />
-            }
-          />
-        </Box></Item>
-        </Grid> */}
-       
+           <Typography
+            variant="h5"
+             fontWeight="600"
+             color={colors.grey[100]}
+             >
+             TOTAL LOAN
+             
+           </Typography>
+           <Typography
+            variant="h5"
+             fontWeight="600"
+             color={colors.grey[100]}
+             >
+             0
+             
+           </Typography>
+           <Typography
+            variant="h5"
+             fontWeight="600"
+             color={colors.grey[100]}
+             >
+             {<CreditScoreIcon style={{color:'green',fontSize:'2rem'}}/>}
+           </Typography>
+            
+          
+        </Box>
+        </Grid>
+        <Grid  item xs={12} sm={6} md={3}>
+          <Box
+          gridRow="span 1"
+          backgroundColor={colors.primary[400]}
+          display="flex"
+          alignItems="center"
+          justifyContent="space-around"
+          height="4rem"
+        >
+           <Typography
+            variant="h5"
+             fontWeight="600"
+             color={colors.grey[100]}
+             >
+             TOTAL PENDING LOAN
+           </Typography>
+           <Typography
+            variant="h5"
+             fontWeight="600"
+             color={colors.grey[100]}
+             >
+             0
+             
+           </Typography>
+           <Typography
+            variant="h5"
+             fontWeight="600"
+             color={colors.grey[100]}
+             >
+             {<CreditScoreIcon style={{color:'green',fontSize:'2rem'}}/>}
+           </Typography>
+            
+        
+        </Box>
+        </Grid>
+        <Grid item xs={12} sm={6} md={3}>
+          <Box
+          gridRow="span 1"
+          backgroundColor={colors.primary[400]}
+          display="flex"
+          alignItems="center"
+          justifyContent="space-around"
+          height="4rem"
+        >
+           <Typography
+            variant="h5"
+             fontWeight="600"
+             color={colors.grey[100]}
+             >
+             TOTAL RUNNING LOAN
+             
+           </Typography>
+           <Typography
+            variant="h5"
+             fontWeight="600"
+             color={colors.grey[100]}
+             >
+             0
+             
+           </Typography>
+           <Typography
+            variant="h5"
+             fontWeight="600"
+             color={colors.grey[100]}
+             >
+             {<CreditScoreIcon style={{color:'green',fontSize:'2rem'}}/>}
+           </Typography>
+            
+          
+        </Box>
+        </Grid>
+        <Grid  item xs={12} sm={6} md={3}>
+          <Box
+          gridRow="span 1"
+          backgroundColor={colors.primary[400]}
+          display="flex"
+          alignItems="center"
+          justifyContent="space-around"
+          height="4rem"
+        >
+           <Typography
+            variant="h5"
+             fontWeight="600"
+             color={colors.grey[100]}
+             >
+             TOTAL PAID LOAN
+           </Typography>
+           <Typography
+            variant="h5"
+             fontWeight="600"
+             color={colors.grey[100]}
+             >
+             0
+             
+           </Typography>
+           <Typography
+            variant="h5"
+             fontWeight="600"
+             color={colors.grey[100]}
+             >
+             {<CreditScoreIcon style={{color:'GREEN',fontSize:'2rem'}}/>}
+           </Typography>
+            
+        
+        </Box>
+        </Grid>
+        <Grid item xs={12} sm={6} md={3}>
+          <Box
+          gridRow="span 1"
+          backgroundColor={colors.primary[400]}
+          display="flex"
+          alignItems="center"
+          justifyContent="space-around"
+          height="4rem"
+        >
+           <Typography
+            variant="h5"
+             fontWeight="600"
+             color={colors.grey[100]}
+             >
+             TOTAL REJECTED LOAN
+             
+           </Typography>
+           <Typography
+            variant="h5"
+             fontWeight="600"
+             color={colors.grey[100]}
+             >
+             0
+             
+           </Typography>
+           <Typography
+            variant="h5"
+             fontWeight="600"
+             color={colors.grey[100]}
+             >
+             {<CreditScoreIcon style={{color:'red',fontSize:'2rem'}}/>}
+           </Typography>
+            
+          
+        </Box>
+        </Grid>
+        <Grid  item xs={12} sm={6} md={3}>
+          <Box
+          gridRow="span 1"
+          backgroundColor={colors.primary[400]}
+          display="flex"
+          alignItems="center"
+          justifyContent="space-around"
+          height="4rem"
+        >
+           <Typography
+            variant="h5"
+             fontWeight="600"
+             color={colors.grey[100]}
+             >
+             TOTAL DPS
+           </Typography>
+           <Typography
+            variant="h5"
+             fontWeight="600"
+             color={colors.grey[100]}
+             >
+             0
+             
+           </Typography>
+           <Typography
+            variant="h5"
+             fontWeight="600"
+             color={colors.grey[100]}
+             >
+             {<WarehouseIcon style={{color:'green',fontSize:'2rem'}}/>}
+           </Typography>
+            
+        
+        </Box>
+        </Grid>
+        <Grid item xs={12} sm={6} md={3}>
+          <Box
+          gridRow="span 1"
+          backgroundColor={colors.primary[400]}
+          display="flex"
+          alignItems="center"
+          justifyContent="space-around"
+          height="4rem"
+        >
+           <Typography
+            variant="h5"
+             fontWeight="600"
+             color={colors.grey[100]}
+             >
+             TOTAL RUNNING DPS
+             
+           </Typography>
+           <Typography
+            variant="h5"
+             fontWeight="600"
+             color={colors.grey[100]}
+             >
+             0
+             
+           </Typography>
+           <Typography
+            variant="h5"
+             fontWeight="600"
+             color={colors.grey[100]}
+             >
+             {<WarehouseIcon style={{color:'green',fontSize:'2rem'}}/>}
+           </Typography>
+            
+          
+        </Box>
+        </Grid>
+        <Grid  item xs={12} sm={6} md={3}>
+          <Box
+          gridRow="span 1"
+          backgroundColor={colors.primary[400]}
+          display="flex"
+          alignItems="center"
+          justifyContent="space-around"
+          height="4rem"
+        >
+           <Typography
+            variant="h5"
+             fontWeight="600"
+             color={colors.grey[100]}
+             >
+             TOTAL MATURED DPS
+           </Typography>
+           <Typography
+            variant="h5"
+             fontWeight="600"
+             color={colors.grey[100]}
+             >
+             0
+             
+           </Typography>
+           <Typography
+            variant="h5"
+             fontWeight="600"
+             color={colors.grey[100]}
+             >
+             {<WarehouseIcon style={{color:'GREEN',fontSize:'2rem'}}/>}
+           </Typography>
+            
+        
+        </Box>
+        </Grid>
+        <Grid  item xs={12} sm={6} md={3}>
+          <Box
+          gridRow="span 1"
+          backgroundColor={colors.primary[400]}
+          display="flex"
+          alignItems="center"
+          justifyContent="space-around"
+          height="4rem"
+        >
+           <Typography
+            variant="h5"
+             fontWeight="600"
+             color={colors.grey[100]}
+             >
+             TOTAL FDR
+           </Typography>
+           <Typography
+            variant="h5"
+             fontWeight="600"
+             color={colors.grey[100]}
+             >
+             0
+             
+           </Typography>
+           <Typography
+            variant="h5"
+             fontWeight="600"
+             color={colors.grey[100]}
+             >
+             {<AdminPanelSettingsIcon style={{color:'GREEN',fontSize:'2rem'}}/>}
+           </Typography>
+            
+        
+        </Box>
+        </Grid>
+        <Grid  item xs={12} sm={6} md={3}>
+          <Box
+          gridRow="span 1"
+          backgroundColor={colors.primary[400]}
+          display="flex"
+          alignItems="center"
+          justifyContent="space-around"
+          height="4rem"
+        >
+           <Typography
+            variant="h5"
+             fontWeight="600"
+             color={colors.grey[100]}
+             >
+             TOTAL RUNNING FDR
+           </Typography>
+           <Typography
+            variant="h5"
+             fontWeight="600"
+             color={colors.grey[100]}
+             >
+             0
+             
+           </Typography>
+           <Typography
+            variant="h5"
+             fontWeight="600"
+             color={colors.grey[100]}
+             >
+             {<AdminPanelSettingsIcon style={{color:'GREEN',fontSize:'2rem'}}/>}
+           </Typography>
+            
+        
+        </Box>
+        </Grid>
+        <Grid  item xs={12} sm={6} md={3}>
+          <Box
+          gridRow="span 1"
+          backgroundColor={colors.primary[400]}
+          display="flex"
+          alignItems="center"
+          justifyContent="space-around"
+          height="4rem"
+        >
+           <Typography
+            variant="h5"
+             fontWeight="600"
+             color={colors.grey[100]}
+             >
+             TOTAL CLOSED FDR
+           </Typography>
+           <Typography
+            variant="h5"
+             fontWeight="600"
+             color={colors.grey[100]}
+             >
+             0
+             
+           </Typography>
+           <Typography
+            variant="h5"
+             fontWeight="600"
+             color={colors.grey[100]}
+             >
+             {<AdminPanelSettingsIcon style={{color:'RED',fontSize:'2rem'}}/>}
+           </Typography>
+            
+        
+        </Box>
+        </Grid>
+        <Grid  item xs={12} sm={6} md={3}>
+          <Box
+          gridRow="span 1"
+          backgroundColor={colors.primary[400]}
+          display="flex"
+          alignItems="center"
+          justifyContent="space-around"
+          height="4rem"
+        >
+           <Typography
+            variant="h5"
+             fontWeight="600"
+             color={colors.grey[100]}
+             >
+             TOTAL TRANSACTIONS
+           </Typography>
+           <Typography
+            variant="h5"
+             fontWeight="600"
+             color={colors.grey[100]}
+             >
+             123
+             
+           </Typography>
+           <Typography
+            variant="h5"
+             fontWeight="600"
+             color={colors.grey[100]}
+             >
+             {<AttachMoneyIcon style={{color:'GREEN',fontSize:'2rem'}}/>}
+           </Typography>
+            
+        
+        </Box>
+        </Grid>
+        <Grid  item xs={12} sm={6} md={4}>
+          <Box
+          gridRow="span 1"
+          backgroundColor={colors.primary[400]}
+          display="flex"
+          alignItems="center"
+          justifyContent="space-around"
+          height="4rem"
+        >
+          <Box>
+           <Typography
+            variant="h6"
+            marginBottom="5px"
+             color={colors.grey[100]}
+             >
+             TOTAL DEPOSITE AMMOUNT
+           </Typography>
+           <Typography
+            variant="h4"
+             fontWeight="200"
+             color={colors.greenAccent[50]}
+             >
+             0.00INR
+             
+           </Typography>
+           </Box>
+           <Box>
+           <Typography
+            variant="h5"
+             fontWeight="600"
+             color={colors.grey[100]}
+             >
+             {<AttachMoneyIcon style={{color:'GREEN',fontSize:'3rem'}}/>}
+           </Typography>
+           </Box>
+            
+        
+        </Box>
+        </Grid>
+        <Grid  item xs={12} sm={6} md={4}>
+          <Box
+          gridRow="span 1"
+          backgroundColor={colors.primary[400]}
+          display="flex"
+          alignItems="center"
+          justifyContent="space-around"
+          height="4rem"
+        >
+          <Box>
+           <Typography
+            variant="h6"
+            marginBottom="5px"
+             color={colors.grey[100]}
+             >
+             TOTAL WITHDRAW AMMOUNT
+           </Typography>
+           <Typography
+            variant="h4"
+             fontWeight="200"
+             color={colors.greenAccent[50]}
+             >
+             0.00INR
+             
+           </Typography>
+           </Box>
+           <Box>
+           <Typography
+            variant="h5"
+             fontWeight="600"
+             color={colors.grey[100]}
+             >
+             {<AttachMoneyIcon style={{color:'GREEN',fontSize:'3rem'}}/>}
+           </Typography>
+           </Box>
+            
+        
+        </Box>
+        </Grid>
+        <Grid  item xs={12} sm={6} md={4}>
+          <Box
+          gridRow="span 1"
+          backgroundColor={colors.primary[400]}
+          display="flex"
+          alignItems="center"
+          justifyContent="space-around"
+          height="4rem"
+        >
+          <Box>
+           <Typography
+            variant="h6"
+            marginBottom="5px"
+             color={colors.grey[100]}
+             >
+             TOTAL WITHDRAW CHARGE AMOUNT
+           </Typography>
+           <Typography
+            variant="h4"
+             fontWeight="200"
+             color={colors.greenAccent[50]}
+             >
+             0.00INR
+             
+           </Typography>
+           </Box>
+           <Box>
+           <Typography
+            variant="h5"
+             fontWeight="600"
+             color={colors.grey[100]}
+             >
+             {<AttachMoneyIcon style={{color:'GREEN',fontSize:'3rem'}}/>}
+           </Typography>
+           </Box>
+            
+        
+        </Box>
+
+        </Grid>
+        
       </Grid>
-   
+      <Box marginTop="2.4rem">
+      <Table/>
+      </Box>
+      </div>
     </Box>
+    
   );
 }
 
 
-// import { Box, Button, IconButton, Typography, useTheme } from "@mui/material";
-// import { tokens } from "../../theme";
-// import { mockTransactions } from "../../data/mockData";
-// import DownloadOutlinedIcon from "@mui/icons-material/DownloadOutlined";
-// import EmailIcon from "@mui/icons-material/Email";
-// import PointOfSaleIcon from "@mui/icons-material/PointOfSale";
-// import PersonAddIcon from "@mui/icons-material/PersonAdd";
-// import TrafficIcon from "@mui/icons-material/Traffic";
-// import Header from "../../components/Header";
-// import LineChart from "../../components/LineChart";
-// import GeographyChart from "../../components/GeographyChart";
-// import BarChart from "../../components/BarChart";
-// import StatBox from "../../components/StatBox";
-// import ProgressCircle from "../../components/ProgressCircle";
-
-// const Dashboard = () => {
-//   const theme = useTheme();
-//   const colors = tokens(theme.palette.mode);
-
-//   return (
-//     <Box m="20px">
-//       {/* HEADER */}
-//       <Box display="flex" justifyContent="space-between" alignItems="center">
-//         <Header title="DASHBOARD" subtitle="Welcome to your dashboard" />
-
-//         {/* <Box>
-//           <Button
-//             sx={{
-//               backgroundColor: colors.blueAccent[700],
-//               color: colors.grey[100],
-//               fontSize: "14px",
-//               fontWeight: "bold",
-//               padding: "10px 20px",
-//             }}
-//           >
-//             <DownloadOutlinedIcon sx={{ mr: "10px" }} />
-//             Download Reports
-//           </Button>
-//         </Box> */}
-//       </Box>
-
-//       {/* GRID & CHARTS */}
-//       <Box
-//         display="grid"
-//         gridTemplateColumns="repeat(12, 2fr)"
-//         gridAutoRows="6rem"
-//         gap="1rem"
-//       >
-//         {/* ROW 1 */}
-//         <Box
-//           gridRow="span 1"
-//           backgroundColor={colors.primary[400]}
-//           display="flex"
-//           alignItems="center"
-//           justifyContent="center"
-//         >
-//           <StatBox
-//             title="12,361"
-//             subtitle="Emails Sent"
-//             progress={ProgressCircle}
-//             icon={
-//               <EmailIcon
-//                 sx={{ color: colors.greenAccent[600], fontSize: "26px" }}
-//               />
-//             }
-//           />
-//         </Box>
-//            <Box
-//           gridRow="span 1"
-//           backgroundColor={colors.primary[400]}
-//           display="flex"
-//           alignItems="center"
-//           justifyContent="center"
-//         >
-//           <StatBox
-//             title="12,361"
-//             subtitle="Emails Sent"
-//             progress={ProgressCircle}
-//             icon={
-//               <EmailIcon
-//                 sx={{ color: colors.greenAccent[600], fontSize: "26px" }}
-//               />
-//             }
-//           />
-//         </Box>
-//         {/* <Box
-//           gridColumn="span 3"
-//           backgroundColor={colors.primary[400]}
-//           display="flex"
-//           alignItems="center"
-//           justifyContent="center"
-//         >
-//           <StatBox
-//             title="431,225"
-//             subtitle="Sales Obtained"
-//             progress={ProgressCircle}
-//             icon={
-//               <PointOfSaleIcon
-//                 sx={{ color: colors.greenAccent[600], fontSize: "26px" }}
-//               />
-//             }
-//           />
-//         </Box>
-//         <Box
-//           gridColumn="span 3"
-//           backgroundColor={colors.primary[400]}
-//           display="flex"
-//           alignItems="center"
-//           justifyContent="center"
-//         >
-//           <StatBox
-//             title="32,441"
-//             subtitle="New Clients"
-//             progress={ProgressCircle}
-//             icon={
-//               <PersonAddIcon
-//                 sx={{ color: colors.greenAccent[600], fontSize: "26px" }}
-//               />
-//             }
-//           />
-//         </Box>
-//         <Box
-//           gridColumn="span 3"
-//           backgroundColor={colors.primary[400]}
-//           display="flex"
-//           alignItems="center"
-//           justifyContent="center"
-//         >
-//           <StatBox
-//             title="1,325,134"
-//             subtitle="Traffic Received"
-//             progress={ProgressCircle}
-           
-//             icon={ 
-
-//               <TrafficIcon
-//                 sx={{ color: colors.greenAccent[600], fontSize: "26px" }}
-//               />
-//             }
-           
-//           />
-//         </Box> */}
-
-//         {/* ROW 2 */}
-//         {/* <Box
-//           gridColumn="span 8"
-//           gridRow="span 2"
-//           backgroundColor={colors.primary[400]}
-//         >
-//           <Box
-//             mt="25px"
-//             p="0 30px"
-//             display="flex "
-//             justifyContent="space-between"
-//             alignItems="center"
-//           >
-//             <Box>
-//               <Typography
-//                 variant="h5"
-//                 fontWeight="600"
-//                 color={colors.grey[100]}
-//               >
-//                 Revenue Generated
-//               </Typography>
-//               <Typography
-//                 variant="h3"
-//                 fontWeight="bold"
-//                 color={colors.greenAccent[500]}
-//               >
-//                 $59,342.32
-//               </Typography>
-//             </Box>
-//             <Box>
-//               <IconButton>
-//                 <DownloadOutlinedIcon
-//                   sx={{ fontSize: "26px", color: colors.greenAccent[500] }}
-//                 />
-//               </IconButton>
-//             </Box>
-//           </Box>
-//           <Box height="250px" m="-20px 0 0 0">
-//             <LineChart isDashboard={true} />
-//           </Box>
-//         </Box>
-//         <Box
-//           gridColumn="span 4"
-//           gridRow="span 2"
-//           backgroundColor={colors.primary[400]}
-//           overflow="auto"
-//         >
-//           <Box
-//             display="flex"
-//             justifyContent="space-between"
-//             alignItems="center"
-//             borderBottom={`4px solid ${colors.primary[500]}`}
-//             colors={colors.grey[100]}
-//             p="15px"
-//           >
-//             <Typography color={colors.grey[100]} variant="h5" fontWeight="600">
-//               Recent Transactions
-//             </Typography>
-//           </Box>
-//           {mockTransactions.map((transaction, i) => (
-//             <Box
-//               key={`${transaction.txId}-${i}`}
-//               display="flex"
-//               justifyContent="space-between"
-//               alignItems="center"
-//               borderBottom={`4px solid ${colors.primary[500]}`}
-//               p="15px"
-//             >
-//               <Box>
-//                 <Typography
-//                   color={colors.greenAccent[500]}
-//                   variant="h5"
-//                   fontWeight="600"
-//                 >
-//                   {transaction.txId}
-//                 </Typography>
-//                 <Typography color={colors.grey[100]}>
-//                   {transaction.user}
-//                 </Typography>
-//               </Box>
-//               <Box color={colors.grey[100]}>{transaction.date}</Box>
-//               <Box
-//                 backgroundColor={colors.greenAccent[500]}
-//                 p="5px 10px"
-//                 borderRadius="4px"
-//               >
-//                 ${transaction.cost}
-//               </Box>
-//             </Box>
-//           ))}
-//         </Box> */}
-
-//         {/* ROW 3 */}
-//         {/* <Box
-//           gridColumn="span 4"
-//           gridRow="span 2"
-//           backgroundColor={colors.primary[400]}
-//           p="30px"
-//         >
-//           <Typography variant="h5" fontWeight="600">
-//             Campaign
-//           </Typography>
-//           <Box
-//             display="flex"
-//             flexDirection="column"
-//             alignItems="center"
-//             mt="25px"
-//           >
-//             <ProgressCircle size="125" />
-//             <Typography
-//               variant="h5"
-//               color={colors.greenAccent[500]}
-//               sx={{ mt: "15px" }}
-//             >
-//               $48,352 revenue generated
-//             </Typography>
-//             <Typography>Includes extra misc expenditures and costs</Typography>
-//           </Box>
-//         </Box>
-//         <Box
-//           gridColumn="span 4"
-//           gridRow="span 2"
-//           backgroundColor={colors.primary[400]}
-//         >
-//           <Typography
-//             variant="h5"
-//             fontWeight="600"
-//             sx={{ padding: "30px 30px 0 30px" }}
-//           >
-//             Sales Quantity
-//           </Typography>
-//           <Box height="250px" mt="-20px">
-//             <BarChart isDashboard={true} />
-//           </Box>
-//         </Box>
-//         <Box
-//           gridColumn="span 4"
-//           gridRow="span 2"
-//           backgroundColor={colors.primary[400]}
-//           padding="30px"
-//         >
-//           <Typography
-//             variant="h5"
-//             fontWeight="600"
-//             sx={{ marginBottom: "15px" }}
-//           >
-//             Geography Based Traffic
-//           </Typography>
-//           <Box height="200px">
-//             <GeographyChart isDashboard={true} />
-//           </Box>
-//         </Box> */}
-//       </Box>
-//     </Box>
-//   );
-// };
-
-// export default Dashboard;

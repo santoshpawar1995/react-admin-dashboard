@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Routes, Route } from "react-router-dom";
 import Topbar from "./scenes/global/Topbar";
-import Sidebar from "./scenes/global/Sidebar";
+
 import Dashboard from "./scenes/dashboard";
 import Team from "./scenes/team";
 import Invoices from "./scenes/invoices";
@@ -15,7 +15,20 @@ import Geography from "./scenes/geography";
 import { CssBaseline, ThemeProvider } from "@mui/material";
 import { ColorModeContext, useMode } from "./theme";
 import Calendar from "./scenes/calendar/calendar";
+import Details from "./scenes/dashboard/Details";
+import './App.css'
 
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+
+
+import Users from "./pages/Users";
+import Messages from "./pages/Messages";
+import FileManager from "./pages/FileManager";
+import Analytics from "./pages/Analytics";
+import Order from "./pages/Order";
+import Saved from "./pages/Saved";
+import Setting from "./pages/Setting";
+import SideBar from "./scenes/global/Sidebar";
 function App() {
   const [theme, colorMode] = useMode();
   const [isSidebar, setIsSidebar] = useState(true);
@@ -25,21 +38,23 @@ function App() {
       <ThemeProvider theme={theme}>
         <CssBaseline />
         <div className="app">
-          <Sidebar isSidebar={isSidebar} />
+          <SideBar isSidebar={isSidebar} />
           <main className="content">
             <Topbar setIsSidebar={setIsSidebar} />
             <Routes>
-              <Route path="/" element={<Dashboard />} />
-              <Route path="/team" element={<Team />} />
-              <Route path="/contacts" element={<Contacts />} />
-              <Route path="/invoices" element={<Invoices />} />
-              <Route path="/form" element={<Form />} />
-              <Route path="/bar" element={<Bar />} />
-              <Route path="/pie" element={<Pie />} />
-              <Route path="/line" element={<Line />} />
-              <Route path="/faq" element={<FAQ />} />
-              <Route path="/calendar" element={<Calendar />} />
-              <Route path="/geography" element={<Geography />} />
+              <Route path="/" element={<Dashboard/>} />
+              <Route path="/details/:empid" element={<Details/>} />
+            
+          {/* <Route path="/users" element={<Users />} />
+          <Route path="/messages" element={<Messages />} />
+          <Route path="/analytics" element={<Analytics />} />
+          <Route path="/file-manager" element={<FileManager />} />
+          <Route path="/order" element={<Order />} />
+          <Route path="/saved" element={<Saved />} />
+          <Route path="/settings" element={<Setting />} />
+
+          <Route path="*" element={<> not found</>} /> */}
+
             </Routes>
           </main>
         </div>
